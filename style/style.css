@@ -14,7 +14,7 @@
 }
 
 body {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,40 +25,13 @@ body {
     line-height: 1.5rem;
     
 }
-
-.wrapper {
-    max-width: 300px;
-    width: 95%;
+.row {
+    width: 900px;
+    height: 400px;
     background-color: var(--Dark-desaturated-blue);
     border-radius: 10px;
     overflow: hidden;
-    text-align: center;
-    margin: 2em;
     font-family: 'Lexend Deca', sans-serif;
-}
-
-.wrap-two {
-    padding: 2em;
-}
-
-h1 {
-    margin-bottom: 1em;
-}
-
-.IMg , .img {
-    width: 100%;
-    height: 100%    ;
-}
-.wrap-one{
-    position: relative;
-}
-.background-img {
-    background-color: var(--Soft-violet);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    opacity: 0.6;
 }
 span {
     color: var(--Soft-violet);
@@ -68,11 +41,13 @@ span {
     font-weight: 400;
     color: var(--Slightly-transparent-white);
 }
+.fw-bolder {
+    font-size:32px;
+}
 
 .sats {
     font-family: 'Inter', sans-serif;
     display: flex;
-    flex-direction: column;
     gap: 2em;
     margin-top: 2em;
     color: var(--Slightly-transparent-white-sats);
@@ -80,36 +55,57 @@ span {
 
 .sats-nums {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 24px;
     color: var(--White);
 }
+
+
+.IMg , .img {
+    width: 100%;
+    height: 100%    ;
+}
+.wrap-one{
+    width: 100%;
+    height: 100%;
+}
+.background-img {
+    background-color: var(--Soft-violet);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0.6;
+}
+
 picture{
     height: 100%;
     width: 100%;
 }
-@media only screen and (min-width: 616px) {
-    .wrapper {
-        max-width: 790px;
-        margin: 0 auto;
+@media only screen and (max-width: 910px) {
+    body{
+        padding: 20px;
+        height: fit-content;
+    }
+    .row{
+        width: 100%;
+        height: fit-content;
         display: flex;
-        flex-direction: row-reverse;
-          text-align: left;
+        flex-direction: column-reverse;
     }
-
-    .wrap-two {
-        width: 70%;
-        padding: 4em;
+    .text-container{
+        width: 100%;
+        height: fit-content;
+        margin: 0;
+        text-align: center;
     }
-
-    IMg {
-        height: 100%;
-        object-fit: cover;
+    .IMg , .img {
+        width: 100%;
+        height: 100%    ;
     }
-
+    .col-md-6.position-relative {
+        width: 100%;
+    }
     .sats {
-        display: flex;
-        flex-direction: row;
-        gap: 3em;
+        flex-direction: column;
     }
-   
-}
+} 
